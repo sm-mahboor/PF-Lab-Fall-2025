@@ -6,7 +6,7 @@ Intersection means elements that are common in both arrays.
 #include <stdio.h>
 
 int main(){
-	int arr1Size, arr2Size, i, j, greater, inscCount = 0;
+	int arr1Size, arr2Size, i, j, smaller, inscCount = 0;
 	
 	// Taking Array 1 as input:
 	printf("Enter size of array 1: ");
@@ -31,8 +31,8 @@ int main(){
 	printf("\n");	// White space
 	
 	// Creating a separate array, intersection[], to store the intersecting elements:
-	greater = (arr1Size > arr2Size)?arr1Size:arr2Size;
-	int intersection[greater];
+	smaller = (arr1Size < arr2Size)?arr1Size:arr2Size;
+	int intersection[smaller];
 	
 	// Comparing each element of array1 with all elements of array2
 	// & adding only those elements which are found in both arrays:
